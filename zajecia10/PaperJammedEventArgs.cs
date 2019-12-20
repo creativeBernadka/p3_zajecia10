@@ -2,13 +2,11 @@ using System;
 
 namespace zajecia10
 {
-    public class PaperJammedEventArgs: EventArgs
+    public class PaperJammedEventArgs: PrinterEventArgs
     {
-        public int Page { get; set; }
 
-        public PaperJammedEventArgs(int page)
+        public PaperJammedEventArgs(int page) : base(page)
         {
-            Page = page;
         }
     }
 }

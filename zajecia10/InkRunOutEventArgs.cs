@@ -2,14 +2,12 @@ using System;
 
 namespace zajecia10
 {
-    public class InkRunOutEventArgs : EventArgs
+    public class InkRunOutEventArgs : PrinterEventArgs
     {
-        public int Page { get; set; }
         public string Ink { get; set; }
 
-        public InkRunOutEventArgs(int page, string ink)
+        public InkRunOutEventArgs(int page, string ink): base(page)
         {
-            Page = page;
             Ink = ink;
         }
     }
